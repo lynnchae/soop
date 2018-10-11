@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="stockServiceContact" class="org.lynn.soop.service.stock.StockService"/>
+    <bean id="skuService" class="org.lynn.soop.service.sku.SkuService"/>
+    <bean id="adminServiceContract" class="org.lynn.soop.service.admin.AdminService"/>
+    <bean id="userServiceContact" class="org.lynn.soop.service.user.UserService"/>
+    <bean id="orderServiceContract" class="org.lynn.soop.service.order.OrderService"/>
+    <bean id="payServiceContract" class="org.lynn.soop.service.pay.PayService"/>
+    <bean id="sessionServiceContact" class="org.lynn.soop.service.member.SessionService"/>
+    <bean id="cartServiceContact" class="org.lynn.soop.service.member.CartService"/>
+    <bean id="fileStoreServiceContact" class="org.lynn.soop.service.function.QiniuCloudStoreService"/>
+    <bean id="productServiceContact" class="org.lynn.soop.service.product.ProductService"/>
+    <bean id="memberServiceContact" class="org.lynn.soop.service.member.MemberService"/>
+    <bean id="smsServiceContact" class="org.lynn.soop.service.function.MengwangSmsService"/>
+    <bean id="kuaidiServiceContact" class="org.lynn.soop.service.function.QianxiSudiService"/>
+    <bean id="sysConfigContract" class="org.lynn.soop.service.function.SysConfigService"/>
+    <bean id="goodsService" class="org.lynn.soop.service.goods.GoodsService"/>
+</beans>

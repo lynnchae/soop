@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+       default-lazy-init="true">
+    <context:property-placeholder ignore-unresolvable="true" ignore-resource-not-found="true"
+                                  location="classpath*:/application.properties"/>
+    <dubbo:application name="${application.name}"/>
+    <!--<dubbo:registry protocol="zookeeper" address="${dubbo.zookeeperAddress}" register="${dubbo.register}"/>-->
+    <!--<dubbo:consumer check="false"/>-->
+    <!--<dubbo:protocol name="rest" port="${server.port}" threads="500" accepts="500" server="netty"/>-->
+
+    <!--<dubbo:monitor protocol="registry"/>-->
+    <!-- 扫描注解包路径，多个包用逗号分隔，不填pacakge表示扫描当前ApplicationContext中所有的类 -->
+    <!--<dubbo:annotation package="com.xiequ.gougou.mainBusiness.controller, com.xiequ.gougou.mainBusiness.contact-->
+    <!--com.xiequ.commonService.authCenter.contract"/>-->
+    <dubbo:service interface="org.lynn.soop.contract.sku.SkuServiceContact" ref="skuService"/>
+    <bean id="skuService" class="org.lynn.soop.service.sku.SkuService"/>
+
+</beans>
